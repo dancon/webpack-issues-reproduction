@@ -93,6 +93,10 @@ var _webpackEntry = __webpack_require__(3);
 
 var _webpackEntry2 = _interopRequireDefault(_webpackEntry);
 
+var _path = __webpack_require__(4);
+
+var _path2 = _interopRequireDefault(_path);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var test = new _webpackEntry2.default();
@@ -133,6 +137,12 @@ var Test = function () {
 }();
 
 exports.default = Test;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+module.exports = require("path");
 
 /***/ })
 /******/ ]);
