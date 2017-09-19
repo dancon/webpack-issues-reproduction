@@ -18,11 +18,6 @@ const completeCompile = () => {
   })
 }
 
-compiler.run((error, stats) => {
-  error && console.log(error)
-  console.log('webpack compile finised')
-})
-
 const watching = compiler.watch({
   aggregateTimeout: 400,
   poll: true

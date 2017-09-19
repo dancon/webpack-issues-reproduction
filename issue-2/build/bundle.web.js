@@ -73,40 +73,66 @@ module.exports = __webpack_require__(2);
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-Object.prototype.greeting = name => {
-  console.log(`Hello, ${name || 'Webpack!'}`)
-}
+"use strict";
+
+
+Object.prototype.greeting = function (name) {
+  console.log('Hello, ' + (name || 'Webpack!'));
+};
 
 /***/ }),
 /* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__webpack_entry_2__ = __webpack_require__(3);
 
 
-const test = new __WEBPACK_IMPORTED_MODULE_0__webpack_entry_2__["a" /* default */]()
+var _webpackEntry = __webpack_require__(3);
 
-test.run()
+var _webpackEntry2 = _interopRequireDefault(_webpackEntry);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var test = new _webpackEntry2.default();
+
+test.run();
 
 /***/ }),
 /* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-class Test {
-  run(){
-    console.log('this is Test class run method')
-    console.log('success compile')
-    const obj = {}
-    obj.greeting('React')
-  }
-}
 
-/* harmony default export */ __webpack_exports__["a"] = (Test);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Test = function () {
+  function Test() {
+    _classCallCheck(this, Test);
+  }
+
+  _createClass(Test, [{
+    key: 'run',
+    value: function run() {
+      console.log('this is Test class run method');
+      console.log('success compile');
+      var obj = {};
+      obj.greeting('React');
+    }
+  }]);
+
+  return Test;
+}();
+
+exports.default = Test;
 
 /***/ })
 /******/ ]);
